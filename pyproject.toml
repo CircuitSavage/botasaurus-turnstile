@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "botasaurus-turnstile"
+version = "0.1.0"
+description = "Solve Cloudflare Turnstile in Botasaurus via the Peak API — read the sitekey, get a token, inject it. For when the anti-detect driver still stalls on the widget."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Peak" }]
+keywords = [
+    "botasaurus",
+    "cloudflare",
+    "turnstile",
+    "captcha",
+    "solver",
+    "bypass",
+    "cf-clearance",
+    "scraping",
+    "anti-detect",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+botasaurus = ["botasaurus-driver>=4.0"]
+
+[project.urls]
+Homepage = "https://peak.fo/?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=botasaurus-turnstile"
+Documentation = "https://peak.fo/docs/turnstile?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=botasaurus-turnstile"
+Pricing = "https://peak.fo/pricing?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=botasaurus-turnstile"
+Source = "https://github.com/CircuitSavage/botasaurus-turnstile"
+
+[tool.hatch.build.targets.wheel]
+packages = ["botasaurus_turnstile"]
